@@ -9,6 +9,7 @@ const movieSchema = new Schema({
 	description: String,
 	author: String,
 	rating: Number,
+	image: String,
 	// created_at: 
   // updated_at:
 }, {
