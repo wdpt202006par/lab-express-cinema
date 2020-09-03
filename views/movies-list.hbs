@@ -1,4 +1,8 @@
 Movie list
-{{#each movies}}
-<h2>{{this.title}}</h2>
-{{/each}}
+<main class="movies-list">
+    {{#each movies}}
+    <h2>{{this.title}}</h2>
+    <img src="{{this.image}}">
+    <a href="/movie/{{id}}">See more</a>
+    {{/each}}
+</main>

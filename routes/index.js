@@ -12,7 +12,22 @@ router.get('/movies', (req, res, next) => {
             res.render('movies-list', {
                 movies: allTheMoviesFromDb
             })
-            console.log(allTheMoviesFromDb)
+        })
+        .catch(err => {
+            console.log('Error', err);
+            next(err); // afficher la page d'erreur à l'utilisateur
+        });
+})
+
+router.get('/movie/:id', (req, res, next) => {
+    const id = req.params.movieid
+    Movie.findOne({
+            _id: id
+        })
+        .then((movie) => {
+            res.render('movie-detail', {
+                movie: movie
+            })
         })
         .catch(err => {
             console.log('Error', err);
