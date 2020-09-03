@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const Movie = require('../models/Movie.model.js')
 const DB_NAME = 'lab-express-cinema';
 
 mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
@@ -81,3 +81,14 @@ const movies = [{
         showtimes: ['13:00', '15:30', '18:00', '20:10', '22:40']
     }
 ];
+
+
+Movie.create(movies)
+  .then((allMovies) => {
+    console.log(`Year, ${allMovies.length} have been created`)
+
+    mongoose.connection.close()
+  })
+  .catch(err => {
+    console.log('oops', err)
+  })
