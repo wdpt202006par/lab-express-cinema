@@ -20,7 +20,7 @@ router.get('/movies', (req, res, next) => {
 })
 
 router.get('/movie/:id', (req, res, next) => {
-    const id = req.params.movieid
+    const id = req.params.id
     Movie.findOne({
             _id: id
         })
