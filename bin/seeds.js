@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Movies = require('../models/Movie.model.js');
+const Movie = require('../models/Movie.model.js');
 
 const DB_NAME = 'Movie-DB-Project';
 
@@ -99,7 +99,7 @@ const movies = [
 
 // ... your code here
 
-Movies.create(movies)
+Movie.create(movies)
 	.then((allMoviesCreated) => {
 		console.log(`${allMoviesCreated.length} have been created`);
 
