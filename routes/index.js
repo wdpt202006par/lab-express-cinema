@@ -8,16 +8,16 @@ router.get('/', (req, res, next) => res.render('index'));
 
 router.get('/movies', (req, res, next) => {
     Movie.find({})
-        .then((allMoviesFromDb) => {
-            console.log('toto')
+        .then((allTheMoviesFromDb) => {
             res.render('movies-list', {
-                movies: allMoviesFromDb
+                movies: allTheMoviesFromDb
             })
+            console.log(allTheMoviesFromDb)
         })
         .catch(err => {
-            console.log('💥', err)
-            next(err); // 
-        })
+            console.log('Error', err);
+            next(err); // afficher la page d'erreur à l'utilisateur
+        });
 })
 
 
