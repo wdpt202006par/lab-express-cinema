@@ -1,20 +1,20 @@
-const mongoose = require('mongoose')
-const {Schema, model} = mongoose;
+const mongoose = require("mongoose");
+const { Schema, model } = mongoose;
 
-const Movie = new Schema(
+const movieSchema = new Schema( //création d'un Schema=model appelé movieSchema = architecture
   {
     title: String,
     director: String,
-    stars:[String],
-    image:String, 
-    description:String,
-    showTimes:[String],
+    stars: [String],
+    image: String,
+    description: String,
+    showTimes: [String],
   },
   {
-    timestamps: true
+    timestamps: true,
   }
-)
+);
 
-const movieModel = mongoose.model('Movie', Movie);
+const movieModel = model("Movie", movieSchema); //j'imprime mon model
 
 module.exports = movieModel;
