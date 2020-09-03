@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Movie = require("../models/Movie.model.js"); // relier le fichier du model utilisé
+const Movie = require("../models/Movie.model"); // relier le fichier du model utilisé
 
 /* GET home page */
 router.get("/", (req, res, next) => res.render("index", { title: "Cinema Ironhack" }));

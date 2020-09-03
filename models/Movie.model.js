@@ -15,6 +15,6 @@ const movieSchema = new Schema( //création d'un Schema=model appelé movieSchem
   }
 );
 
-const movieModel = model("Movie", movieSchema); //j'imprime mon model
+const movieModel = model("Movie", movieSchema); //j'imprime mon model qui s'appelera Movie dans index.js
 
 module.exports = movieModel;

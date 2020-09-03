@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Movie = require("../models/Movie.model.js");
 
-const DB_NAME = "express-cinema";
+const DB_NAME = "express-cinema-dev";
 
 mongoose
   .connect(`mongodb://localhost/${DB_NAME}`, {
