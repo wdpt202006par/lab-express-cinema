@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+.hero {
+  background: #000 url('../images/cinema.jpg') no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.self-left {
+	align-self: flex-start;
+	text-decoration: none;
+}
+
+.white {
+	color: white;
+	font-size: 110px;
+	padding-right: 3rem;
+	padding-bottom: 4rem;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+  max-width: 1440px;
+  padding: 6rem;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.movie-card {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 20rem;
+}
+
+.pb-l {
+	padding-bottom: 4rem;
+	font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 4rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+}
+
+.content {
+	margin-left: 15rem;
+	max-width: 560px;
+	font-size: 1.7rem;
+}

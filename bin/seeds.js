@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
-
 const Movie = require('../models/Movie.model.js');
 
-const DB_NAME = 'Movie-DB-Project';
+const DB_NAME = 'express-cinema-dev';
 
 mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
 	useCreateIndex: true,
 	useNewUrlParser: true,
 	useUnifiedTopology: true
-}).then(() => {
-	console.log('youhou!');
 });
 
 const movies = [
@@ -95,16 +92,9 @@ const movies = [
   }
 ];
 
-// Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
-
-// ... your code here
-
 Movie.create(movies)
-	.then((allMoviesCreated) => {
-		console.log(`${allMoviesCreated.length} have been created`);
-
+	.then(moviesFromDB => {
+		console.log(`Created ${moviesFromDB.length} movies`);
 		mongoose.connection.close();
 	})
-	.catch(err => {
-		console.log('oops', err);
-	})
+	.catch(err => console.log(`An error occurred while getting movies from the DB: ${err}`));

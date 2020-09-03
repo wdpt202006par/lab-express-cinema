@@ -4,18 +4,32 @@ const mongoose = require('mongoose');
 // const { Schema } = mongoose; // destructuring
 const Schema = mongoose.Schema;
 
-const movieSchema = new Schema({
-	title: String,
-	description: String,
-	author: String,
-	rating: Number,
-	image: String,
+const MovieSchema = new Schema({
+	title: {
+		type: String,
+		required: true,
+	},
+	director: {
+		type: String,
+	},
+	stars: {
+		type: [ String ],
+	},
+	image: {
+		type: String,
+	},
+	description: {
+		type: String,
+	},
+	showtimes: {
+		type: [ String ],
+	},
 	// created_at: 
   // updated_at:
 }, {
 	timestamps: true
 })
 
-const movieModel = mongoose.model('movie', movieSchema);
+const Movie = mongoose.model('movie', MovieSchema);
 
-module.exports = movieModel;
+module.exports = Movie;
