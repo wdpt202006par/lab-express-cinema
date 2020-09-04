@@ -10,7 +10,7 @@ mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
   useUnifiedTopology: true
 })
 .then(()=> {
-    console.log("is connected")
+    console.log("is connected !!!")
 })
 .catch(err => console.log(`An error occurred while creating books from the DB: ${err}`));
 
@@ -94,3 +94,11 @@ const movies = [{
       "Ballerina Dominika Egorova is recruited to 'Sparrow School,' a Russian intelligence service where she is forced to use her body as a weapon. Her first mission, targeting a C.I.A. agent, threatens to unravel the security of both nations.",
     showtimes: ['13:00', '15:30', '18:00', '20:10', '22:40']
   }];
+
+Movie.create(movies).then((allMoviesCreated) => {
+  console.log(`Yeah, ${allMoviesCreated.length} movies have been created`)
+
+  mongoose.connection.close();
+}).catch(err => {
+  console.log('oops',err)
+})
