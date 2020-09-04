@@ -27,12 +27,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
 // Express View engine setup
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
+app.use(require('node-sass-middleware')({
+  src: `${__dirname}/public`,
+  dest: `${__dirname}/public`,
+  sourceMap: true
+}));
+
 
 // default value for title local
 app.locals.title = 'Cinema Ironhack';
