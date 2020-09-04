@@ -1,0 +1,115 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration:none;
+  color: #00B7FF;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.main {
+  background-image: url("/images/cinema.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button {
+  background-color: #ffffff;
+  width: 13.5em;
+  height: 3.5em;
+  border-radius: 6em;
+  padding: 0.5em;
+}
+
+.presentation {
+  margin-left: 60em;
+  margin-bottom: 20em;
+}
+
+#titre-principal {
+  font-size: 100px;
+  color: #ffffff;
+}
+
+/*page 2*/
+
+.page-two {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left:auto;
+    margin-right: auto;
+    width: 1200px; 
+}
+
+.title-page-two {
+margin-top:1em;
+}
+
+.cards {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 4em;
+}
+
+#id-page-two {
+margin-top:1em;
+}
+
+/*affiche*/
+.page-three {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-one img {
+  margin-top:2em;
+} 
+
+.affiche {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  margin-top:2em;
+}
+
+.presentation-one{
+  display: flex;
+  flex-direction: column;
+  margin-left: 4em;
+}
+
+.stars-one {
+  margin-bottom: 1em;
+}
+
+.presentation-one div {
+  margin-top: 0.5em;
+}
+
+.showtimes-one {
+  display: flex;
+}
+
+.showtimes-one li{
+  list-style: ' | ';
+}
+
+.showtimes-one li:not(:first-child){
+  content: ' | ';
+}
+
