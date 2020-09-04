@@ -25,7 +25,7 @@ router.get('/movie/:id', (req, res, next) => {
 
     const id = req.params.id
     
-    Movie.find({_id: id})
+    Movie.findOne({_id: id})
     .then((allMoviesFromDb) => {
       console.log(allMoviesFromDb)
       res.render('movies-details', {
