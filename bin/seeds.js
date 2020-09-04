@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Movie = require('../models/Movie.model.js')
-const DB_NAME = 'lab-EXPRESS-CINEMA'
+const DB_NAME = 'express-cinema'
 
 mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
   useCreateIndex: true,

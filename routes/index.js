@@ -1,5 +1,5 @@
 const express = require('express');
-const Movie = require('../models/Movie.model');
+const Movie = require('../Models/Movie.model.js');
 
 const router = express.Router();
 
@@ -8,10 +8,9 @@ router.get('/', (req, res, next) => res.render('index'));
 
 router.get('/movies', (req, res, next) => {
   Movie.find({})
-    .then((allMoviesFromDb) => {
-      //
+    .then((mov) => {
       res.render('movies', {
-        movies: allMoviesFromDb
+        movies: mov,
       })
     })
     .catch(err => {
@@ -19,5 +18,6 @@ router.get('/movies', (req, res, next) => {
       next(err); // 
     })
 })
+
 
 module.exports = router;
