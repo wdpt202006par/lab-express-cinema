@@ -38,3 +38,30 @@ button {
   font-size: 100px;
   color: #ffffff;
 }
+
+/*page 2*/
+
+.page-two {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left:auto;
+    margin-right: auto;
+    width: 1200px; 
+}
+
+.title-page-two {
+margin-top:1em;
+}
+
+.cards {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 4em;
+}
+
+#id-page-two {
+margin-top:1em;
+}

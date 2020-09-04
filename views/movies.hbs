@@ -1,9 +1,12 @@
-coucou
+
+<div class="page-two">
 
 {{#each movies}}
-<div>
-    {{this.image}}
-    {{this.title}}
-    <a href="/movie/{{this.id}}">See More</a>
+<div class="cards">
+    <img src="{{this.image}}">
+    <div class="title-page-two"><b>{{this.title}}</b></div>
+    <a href="/movie/{{this.id}}" id="id-page-two">See More</a>
 </div>
 {{/each}}
+
+</div>
