@@ -1,9 +1,17 @@
 body {
+    margin: 0;
+}
+
+.homepage {
     background-image: url("/images/cinema.jpg");
     background-size: cover;
-    margin: 0;
-    padding: 50px;
+    height: 100vh;
+    width: auto;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin: 0;
 }
 
 .movies-list {
