@@ -43,11 +43,11 @@ button {
 
 .page-two {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left:auto;
-    margin-right: auto;
-    width: 1200px; 
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left:auto;
+  margin-right: auto;
+  width: 1200px; 
 }
 
 .title-page-two {
@@ -60,6 +60,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 4em;
+padding: 10px;
 }
 
 #id-page-two {
